@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+{% block content %}
+  <main class="px-3">
+    <h1>Electronica Basica</h1>
+
+    {% if request.user.is_authenticated %}
+
+      <p class="lead">{% if request.user.is_authenticated %}Bienvenido {{ user.username | upper }}, {% endif %}. Todos los materiales eléctricos para sus instalaciones, puede encontrarlos en nuestra tienda. Por ser un nuevo usuario, tendrá un 20% de descuento en su primer compra online !!!</p>
+
+    {% else %}
+
+      <p class="lead">Arduino es una plataforma de creación de electrónica de código abierto, la cual es basada en hardware y software libre, flexible y fácil de usar para desarrolladores.</p>
+
+    {% endif %}
+
+  </main>
+{% endblock %}
